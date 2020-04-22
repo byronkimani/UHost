@@ -1,6 +1,9 @@
 main {
 	padding-top: 2rem;
 }
+.visible{
+	display: block;
+}
 .background{
 	background-image: url("../images/plans-background.jpg");
 	background-repeat: no-repeat;

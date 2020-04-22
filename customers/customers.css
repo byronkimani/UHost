@@ -1,4 +1,6 @@
-
+.visible{
+	display: block;
+}
 .testimonial {
 	font-size: 1.2rem;
 	margin: 3rem 0;

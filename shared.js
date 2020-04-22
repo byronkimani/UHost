@@ -6,6 +6,7 @@ const toggleBtn = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
 
 
+
 const toggleBackdrop = () => {
     backdrop.classList.toggle('visible');
 };
@@ -15,7 +16,9 @@ const addModal = () => {
 };
 
 const removeModal = () => {
-    modal.classList.remove('visible');
+    if(modal){
+        modal.classList.remove('visible');
+    }
 };
 
 const selectBtnHandler = () => {
@@ -31,6 +34,7 @@ const cancelModalHandler = () => {
 
 const addMobileNav = () => { 
     mobileNav.classList.add('visible');
+    console.dir(mobileNav);
     toggleBackdrop();
 };
 
@@ -38,9 +42,12 @@ const removeMobileNav = () => {
     mobileNav.classList.remove('visible');
 };
 
+
 selectPlanButtons.forEach(item => {
     item.addEventListener('click', selectBtnHandler);
 });
 backdrop.addEventListener('click', cancelModalHandler);
-cancelSelectionBtn.addEventListener('click', cancelModalHandler);
+if (cancelSelectionBtn){
+    cancelSelectionBtn.addEventListener('click', cancelModalHandler);
+}
 toggleBtn.addEventListener('click', addMobileNav);
