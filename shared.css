@@ -41,27 +41,27 @@ body {
 	padding-top: 0;
 	padding-bottom: 0;
 	vertical-align: middle;
-  }
-  
-  .toggle-button:focus {
+}
+
+.toggle-button:focus {
 	outline: none;
-  }
-  
-  .toggle-button__bar {
+}
+
+.toggle-button__bar {
 	width: 100%;
 	height: 0.2rem;
 	background: black;
 	display: block;
 	margin: 0.6rem 0;
-  }
-  
+}
+
 .main-header__brand {
 	text-decoration: none;
 	color: #0e4f1f;
 	font-weight: bold;
 	font-size: 1.375rem;
-	height: 1.5rem;
-	/* vertical-align: middle; */
+	height: 2rem;
+	vertical-align: middle;
 	display: inline-block;
 }
 .main-header__brand img {
@@ -69,10 +69,7 @@ body {
 }
 
 .main-nav {
-	display: inline-block;
-	text-align: right;
-	width: calc(100% - 122px);
-	vertical-align: middle;
+	display: none;
 }
 
 .main-nav__items {
@@ -115,6 +112,18 @@ body {
 	background-color: white;
 	border: none;
 }
+
+@media (min-width: 43.3rem) {
+	.toggle-button {
+		display: none;
+	}
+	.main-nav {
+		display: inline-block;
+		text-align: right;
+		width: calc(100% - 44px);
+		vertical-align: middle;
+	}
+}
 .main-footer {
 	background-color: black;
 	padding: 2rem;
@@ -127,8 +136,8 @@ body {
 	text-align: center;
 }
 .main-footer__link {
-	display: inline-block;
-	margin: 0 1rem;
+	display: block;
+	margin: 1rem 0;
 }
 .main-footer__links a {
 	text-decoration: none;
@@ -173,6 +182,7 @@ body {
 	border-radius: 8px;
 	font-family: inherit;
 	padding: 0.5rem;
+	margin-top: 1rem;
 	cursor: pointer;
 	font-weight: bold;
 }
@@ -183,4 +193,11 @@ body {
 }
 .button:focus {
 	outline: none;
+}
+
+@media (min-width: 43.3rem) {
+	.main-footer__link {
+		display: inline-block;
+		margin: 0 1rem;
+	}
 }
