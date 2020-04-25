@@ -5,6 +5,11 @@ body {
 	font-family: "Manrope", sans-serif;
 	margin: 0;
 }
+
+main {
+	min-height: calc(100vh - 3.5rem - 8rem);
+	margin-top: 3.5rem;
+  }
 .backdrop {
 	width: 100vw;
 	height: 100vh;
@@ -88,7 +93,7 @@ body {
 	text-decoration: none;
 	color: #0e4f1f;
 	font-weight: bold;
-	padding: 0.19rem;
+	padding: 0.2rem 0;
 }
 .main-nav__item a:hover,
 .main-nav__item a:active {
@@ -113,7 +118,7 @@ body {
 	border: none;
 }
 
-@media (min-width: 43.3rem) {
+@media (min-width: 40rem) {
 	.toggle-button {
 		display: none;
 	}
@@ -127,7 +132,7 @@ body {
 .main-footer {
 	background-color: black;
 	padding: 2rem;
-	margin-top: 4rem;
+	margin-top: 3rem;
 }
 .main-footer__links {
 	list-style-type: none;
@@ -194,8 +199,18 @@ body {
 .button:focus {
 	outline: none;
 }
+.button[disabled]{
+	cursor: not-allowed;
+	border: #a1a1a1;
+	background-color: #ccc;
+	color: #a1a1a1;
+}
 
-@media (min-width: 43.3rem) {
+.open{
+	display: block !important;
+}
+
+@media (min-width: 40rem) {
 	.main-footer__link {
 		display: inline-block;
 		margin: 0 1rem;
