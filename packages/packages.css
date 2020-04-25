@@ -1,4 +1,8 @@
-main {
+body{
+	font-family: 'Manrope', sans-serif;
+}
+	
+	main {
 	padding-top: 2rem;
 }
 .visible{
