@@ -2,7 +2,6 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: "Manrope", sans-serif;
 	overflow-x: hidden;
 	width: 100%;
 }
@@ -42,9 +41,12 @@ body {
 
 .plan {
 	background-color: #d5ffdc;
-	text-align: center;
 	padding: 1rem;
-	margin: 0;
+	text-align: center;
+	margin: 0.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	
 }
 .plan__features {
@@ -52,8 +54,8 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.plan__features li {
-	margin: 0;
+.plan__feature{
+	margin: 0.5rem 0;
 }
 
 .plan--highlighted {
@@ -138,22 +140,34 @@ body {
 	color: white;
 }
 
-@media (min-width: 43.3rem) {
-	.plan {
-		margin: 0.5rem;
-		display: inline-block;
-		width: 30%;
-		vertical-align: middle;
-		max-width: 25rem;
-	}
+@media (min-width: 40rem) {
 	.plan__list {
-		width: 80%;
+		width: 100%;
 		margin: auto;
-		text-align: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
+	
+	.plan {
+		width: 30%;
+		min-width: 13rem;
+		max-width: 25rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		height: 28rem;
+	}
+	
 	.plan--highlighted {
 		margin: 0.5rem 0; 
 		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+		height: 30rem;
+		z-index: 1;
 	}
 }
 #key-features {
@@ -190,12 +204,15 @@ body {
 	font-weight: bold;
 	font-size: 1.2rem;
 }
-@media (min-width: 43.3rem){
+@media (min-width: 40rem){
 	.key-feature{
-		display: inline-block;
 		width: 30%;
-		vertical-align: top;
 		max-width: 25rem;
+	}
+	.key-feature__list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.key-feature__image{
 		padding: 1.2rem;
