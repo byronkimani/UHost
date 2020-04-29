@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 
+:root{
+	--dark-green: #0e4f1f;
+	--highlight-color: #ff1b68;
+	--light-green: #2ddf5c;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -23,11 +29,13 @@ main {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 .visible {
-	display: block;
+	display: block !important;
+	opacity: 1 !important;
+	transform: translateY(0) !important;
 }
 .main-header {
 	width: 100%;
-	background-color: #2ddf5c;
+	background-color: var(--light-green, #2ddf5c);
 	padding: 0.5rem 1rem;
 	position: fixed;
 	top: 0;
@@ -111,6 +119,10 @@ main {
 	border-radius: 8px;
 }
 
+.main-nav__item--cta{
+	animation: wiggle 200ms 3s 8 none;
+}
+
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
@@ -156,7 +168,7 @@ main {
 }
 
 .mobile-nav {
-	display: none;
+	transform: translateX(-100%);
 	position: fixed;
 	z-index: 101;
 	top: 0;
@@ -164,6 +176,7 @@ main {
 	background: white;
 	width: 80%;
 	height: 100vh;
+	transition: transform 200ms ease-in-out;
 }
 
 .mobile-nav__items {
@@ -216,5 +229,16 @@ main {
 	.main-footer__link {
 		display: inline-block;
 		margin: 0 1rem;
+	}
+}
+@keyframes wiggle{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	50%{
+		transform: rotateZ(-10deg);
+	}
+	100%{
+		transform: rotateZ(10deg);
 	}
 }
