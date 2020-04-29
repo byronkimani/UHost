@@ -1,16 +1,19 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 main {
 	padding-top: 2rem;
 }
-.visible{
+.visible {
 	display: block;
 }
 .background {
-    background: url("../images/plans-background.jpg") center/cover;
-    filter: grayscale(40%);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
+	background: url("../images/plans-background.jpg") center/cover;
+	-webkit-filter: grayscale(40%);
+	filter: grayscale(40%);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: -1;
 }
 
 .package {
@@ -21,10 +24,11 @@ main {
 	position: relative;
 	overflow: hidden;
 }
-.package:hover, 
-.package:active{
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border-color: #ff5454 !important;
+.package:hover,
+.package:active {
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	border-color: #ff5454 !important;
 }
 .package a {
 	text-decoration: none;
@@ -34,7 +38,7 @@ main {
 	padding: 2rem;
 }
 
-.package__badge{
+.package__badge {
 	background-color: #ff5454;
 	color: white;
 	position: absolute;
@@ -45,6 +49,8 @@ main {
 	font-size: 0.8rem;
 	font-weight: bold;
 	font-family: inherit;
+	-webkit-transform: rotate(45deg) translate(3.5rem, -1rem);
+	-ms-transform: rotate(45deg) translate(3.5rem, -1rem);
 	transform: rotate(45deg) translate(3.5rem, -1rem);
 	width: 12rem;
 	text-align: center;
@@ -62,37 +68,37 @@ main {
 #plus {
 	background-color: rgba(213, 255, 220, 0.95);
 }
-.clearfix{
-    clear: both;
+.clearfix {
+	clear: both;
 }
 #free {
-    background-color: rgba(234, 252, 237, 0.95);
-    float: right;
-    border-right: none;
-    border-left: solid 4px #0e4f1f;
-    text-align: right;
+	background-color: rgba(234, 252, 237, 0.95);
+	float: right;
+	border-right: none;
+	border-left: solid 4px #0e4f1f;
+	text-align: right;
 }
-#premium{
-    background-color: rgba(14, 79, 31, 0.95);
+#premium {
+	background-color: rgba(14, 79, 31, 0.95);
 }
-#premium .package__title{
-    color: white;
+#premium .package__title {
+	color: white;
 }
-#premium .package__subtitle{
-    color: #bbb;
+#premium .package__subtitle {
+	color: #bbb;
 }
 
-@media (min-width: 40rem){
-	main{
+@media (min-width: 40rem) {
+	main {
 		margin: 3rem auto;
 		max-width: 93.75rem;
 	}
 }
-@media (min-width: 93.75rem){
-	.package{
+@media (min-width: 93.75rem) {
+	.package {
 		border-left: 4px solid #0e4f1f;
 	}
-	#free{
+	#free {
 		border-right: 4px solid #0e4f1f;
 	}
 }
