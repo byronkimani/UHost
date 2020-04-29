@@ -2,13 +2,21 @@
 * {
 	box-sizing: border-box;
 }
+html{
+	height: 100%;
+}
 body {
 	font-family: "Montserrat", sans-serif;
+	display: grid;
+	margin: 0;
+	grid-template-rows: 3.5rem auto fit-content(8rem);
+	height: 100%;
 }
 
 main {
-	min-height: calc(100vh - 3.5rem - 8rem);
-	margin-top: 3.5rem;
+	/* min-height: calc(100vh - 3.5rem - 8rem); */
+	/* margin-top: 3.5rem; */
+	grid-row: 2/3;
 }
 .backdrop {
 	width: 100vw;
@@ -34,6 +42,7 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	grid-row: 1/2;
 }
 
 .toggle-button {
@@ -127,6 +136,7 @@ main {
 	background-color: black;
 	padding: 2rem;
 	margin-top: 3rem;
+	grid-row: 3/4;
 }
 .main-footer__links {
 	list-style-type: none;

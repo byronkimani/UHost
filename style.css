@@ -10,7 +10,7 @@ body {
 		url("images/freedom.jpg") center / cover no-repeat border-box, #ff1b68;
 	width: 100vw;
 	height: 33vh;
-	margin-top: 2.75rem;
+	/* margin-top: 2.75rem; */
 	position: relative;
 }
 
