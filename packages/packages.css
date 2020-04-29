@@ -19,6 +19,7 @@ main {
 	border: solid 4px #0e4f1f;
 	border-left: none;
 	position: relative;
+	overflow: hidden;
 }
 .package:hover, 
 .package:active{
@@ -39,12 +40,14 @@ main {
 	position: absolute;
 	top: 0;
 	right: 0;
+	margin: 0;
 	padding: 0.5rem;
 	font-size: 0.8rem;
-	margin: 1.2rem;
 	font-weight: bold;
 	font-family: inherit;
-	border-radius: 8px;
+	transform: rotate(45deg) translate(3.5rem, -1rem);
+	width: 12rem;
+	text-align: center;
 }
 .package__subtitle {
 	color: #979797;
@@ -76,7 +79,7 @@ main {
     color: white;
 }
 #premium .package__subtitle{
-    color: bbb;
+    color: #bbb;
 }
 
 @media (min-width: 40rem){
